@@ -36,6 +36,9 @@ kwargs = {
     )
 }
 
+# La razón por la que se pone **kwargs con los asteriscos es porque los argumentos de la función "invoke_model" van separados por comas.
+# Por lo tanto podríamos poner cada uno de los parámetros (modelId, contentType, etc) en forma individual pero sería difícil de leer.
+# En cambio con **kwargs, la función sabe que no se le está pasando un JSON sino que tiene que tomar los elementos que tiene dentro.
 response = bedrock_runtime.invoke_model(**kwargs)
 response_body = json.loads(response.get('body').read())
 
