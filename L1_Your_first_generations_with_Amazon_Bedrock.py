@@ -107,7 +107,7 @@ with open('transcript.txt', "r") as file:
 
 # Ahora voy a generar una variable "prompt" que contiene la estructura del prompt que le quiero pasar al modelo.
 # Le explico que el texto (o sea la transcripción del TXT) va a estar dentro de los tags <> de XML y le paso el contenido del
-# archivo TXT con la variable que declaré antes. Por eso se usa el F-String y la variable entre llaves {}
+# archivo TXT con la variable que declaré antes. Por eso se usa el Formated-String y la variable entre llaves {}
 
 prompt = f"""The text between the <transcript> XML tags is a transcript of a conversation. 
 Write a short summary of the conversation.
